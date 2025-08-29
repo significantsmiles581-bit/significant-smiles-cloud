@@ -1,207 +1,227 @@
-<!-- ===== Significant Smiles – Cloud Page (Blogger, Orange Theme) ===== -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dentist in Brisbane City QLD – Significant Smiles</title>
+<meta name="description" content="Significant Smiles in Brisbane CBD: general, cosmetic, restorative, orthodontics & emergency care. Book online or call +61 7 3221 0481.">
 <style>
-  :root{--brand:#f97316;--brandHover:#ea580c;--ink:#0f172a;--line:#e5e7eb}
-  body .ss-wrap{max-width:960px;margin:0 auto;padding:24px 16px;font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--ink)}
-  .ss-hero{background:var(--brand);color:#fff;padding:28px 16px;border-radius:14px;margin:16px 0}
-  .ss-hero h1{margin:0 0 6px;font-size:28px;line-height:1.25}
-  .ss-hero p{margin:0;opacity:.95}
-  .ss-grid{display:grid;gap:16px}
-  @media(min-width:860px){.ss-grid-2{grid-template-columns:1fr 1fr}}
-  .ss-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px;box-shadow:0 2px 8px rgba(2,6,23,.05)}
-  .ss-card h2{margin:.2rem 0 0.6rem}
-  .ss-btn{display:inline-block;background:var(--brand);color:#fff !important;padding:10px 16px;border-radius:10px;margin-top:10px;text-decoration:none}
-  .ss-btn:hover{background:var(--brandHover)}
-  .ss-link{color:var(--brand);text-decoration:none}
-  .ss-link:hover{text-decoration:underline}
-  .ss-list{margin:.2rem 0 0.6rem;padding-left:18px}
-  .ss-kv{display:grid;gap:6px}
-  .ss-kv div{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:6px 0}
-  .ss-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco}
-  .ss-social{display:flex;gap:12px;align-items:center}
-  .ss-icon{width:28px;height:28px;display:inline-block}
-  <style>
-/* === FULL-WIDTH OVERRIDES === */
-body .ss-wrap{max-width:100% !important; width:100% !important; padding-left:0 !important; padding-right:0 !important;}
-/* cards/hero ko column width ke edge tak le jao */
-.ss-hero,.ss-card{border-radius:0 !important; margin-left:0 !important; margin-right:0 !important;}
-/* thoda inner breathing space */
-.ss-hero,.ss-card,.ss-grid{padding-left:16px; padding-right:16px;}
-/* desktop grids same hi rahen */
-@media(min-width:860px){.ss-grid-2{grid-template-columns:1fr 1fr}}
+  :root{
+    --brand:#f97316; --brand-2:#ea580c; --ink:#0f172a; --muted:#475569; --line:#e5e7eb;
+    --soft:#fff7ed; --bg:#ffffff
+  }
+  /* base */
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+  a{color:var(--brand);text-decoration:none} a:hover{text-decoration:underline}
+  img,iframe{max-width:100%;display:block;border:0}
+  .wrap{max-width:1120px;margin:0 auto;padding:20px 18px}
+
+  /* header (unique split hero) */
+  .band{background:var(--soft); border-bottom:1px solid var(--line)}
+  .hero{display:grid; gap:20px; align-items:center}
+  @media(min-width:980px){ .hero{grid-template-columns:1.15fr .85fr} }
+  .hero-title{font-size:34px;line-height:1.15;margin:0}
+  .hero-p{margin:.5rem 0 0;color:#0b1220}
+  .cta-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 10px 24px rgba(2,6,23,.07)}
+  .btn{display:inline-block;background:var(--brand);color:#fff!important;padding:11px 18px;border-radius:10px}
+  .btn:hover{background:var(--brand-2)}
+  .btn-ghost{display:inline-block;border:1px solid var(--brand);color:var(--brand);padding:10px 16px;border-radius:10px}
+  .muted{color:var(--muted)}
+  .tag{display:inline-block;background:var(--brand);color:#fff;padding:6px 10px;border-radius:999px;font-weight:600;font-size:12px;letter-spacing:.3px}
+
+  /* section chrome */
+  .section{padding:18px 0}
+  .h2{font-size:22px;margin:.2rem 0 .7rem}
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:0 4px 14px rgba(2,6,23,.05)}
+  .card-edge{border-left:6px solid var(--brand)}
+  .grid{display:grid;gap:18px}
+  @media(min-width:900px){ .grid-2{grid-template-columns:repeat(2,1fr)} .grid-3{grid-template-columns:repeat(3,1fr)} }
+
+  /* services (horizontal scroll on mobile) */
+  .svc-strip{display:grid;gap:14px;grid-auto-flow:column;grid-auto-columns:85%;overflow-x:auto;padding-bottom:6px;scroll-snap-type:x proximity}
+  .svc{scroll-snap-align:start;border-left:4px solid var(--line);padding-left:12px}
+  .svc h3{margin:.1rem 0 .4rem}
+  .svc p{margin:.1rem 0 .6rem;color:var(--muted)}
+  @media(min-width:900px){ .svc-strip{grid-auto-flow:unset;grid-auto-columns:unset;grid-template-columns:repeat(3,1fr)} }
+
+  /* hours (timeline look) */
+  .timeline{position:relative;padding-left:18px}
+  .timeline:before{content:"";position:absolute;left:7px;top:0;bottom:0;width:2px;background:var(--line)}
+  .t-row{position:relative;padding:8px 0 8px 8px;border-bottom:1px dashed var(--line);display:flex;justify-content:space-between}
+  .t-row:before{content:"";position:absolute;left:-2px;top:16px;width:8px;height:8px;background:var(--brand);border-radius:999px}
+
+  /* social */
+  .social{display:flex;gap:14px;align-items:center}
+  .ico{width:28px;height:28px;display:inline-block}
+
+  /* helpers */
+  .lead-list{margin:.5rem 0 0;padding-left:18px}
 </style>
+</head>
+<body>
 
-</style>
-
-<div class="ss-wrap">
-
-  <!-- HERO -->
-  <section class="ss-hero">
-    <h1>Significant Smiles – Brisbane CBD Dental Clinic</h1>
-    <p>Gentle, modern care for <strong>General, Cosmetic &amp; Restorative Dentistry</strong>, Orthodontics, Emergency visits &amp; Dental Implants—right in the heart of Brisbane CBD.</p>
-  </section>
-
-  <!-- ABOUT + NAP -->
-  <section class="ss-card">
-    <h2>About &amp; Contact</h2>
-    <p><strong>Name:</strong> Significant Smiles</p>
-    <p><strong>Address:</strong> Suite 7, Level 1/167 Albert St, Brisbane City QLD 4000, Australia</p>
-    <p><strong>Phone:</strong> <a class="ss-link" href="tel:+61732210481">+61 7 3221 0481</a> &nbsp;|&nbsp;
-       <strong>Email:</strong> <a class="ss-link" href="mailto:reception@significantsmiles.com.au">reception@significantsmiles.com.au</a></p>
-    <p><strong>Website:</strong> <a class="ss-link" href="https://www.significantsmiles.com.au/" target="_blank" rel="noopener">www.significantsmiles.com.au</a></p>
-    <a class="ss-btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145" target="_blank" rel="noopener">Book Online</a>
-  </section>
-
-  <!-- SERVICES: buttons under each card REMOVED per request -->
-  <section class="ss-grid ss-grid-2">
-    <div class="ss-card">
-      <h2>General Dentistry</h2>
-      <p>Check-ups, cleans, fillings, gum care &amp; everyday oral health tailored for all ages.</p>
-      <a class="ss-link" href="https://www.significantsmiles.com.au/general-dentist/" target="_blank" rel="noopener">Visit General Dentistry →</a>
-    </div>
-
-    <div class="ss-card">
-      <h2>Cosmetic Dentistry</h2>
-      <p>Whitening, veneers &amp; smile makeovers for a brighter, more confident smile.</p>
-      <a class="ss-link" href="https://www.significantsmiles.com.au/cosmetic-dentistry/" target="_blank" rel="noopener">Visit Cosmetic Dentistry →</a>
-    </div>
-
-    <div class="ss-card">
-      <h2>Restorative Dentistry</h2>
-      <p>Dental implants, crowns &amp; long-lasting restorations that look and function naturally.</p>
-      <a class="ss-link" href="https://www.significantsmiles.com.au/restorative-dentistry/" target="_blank" rel="noopener">Visit Restorative Dentistry →</a>
-    </div>
-
-    <div class="ss-card">
-      <h2>Orthodontics</h2>
-      <p>Clear aligners &amp; braces for straighter teeth and healthier bite alignment.</p>
-      <a class="ss-link" href="https://www.significantsmiles.com.au/orthodontics/" target="_blank" rel="noopener">Visit Orthodontics →</a>
-    </div>
-
-    <div class="ss-card">
-      <h2>Emergency Dentistry</h2>
-      <p>Same-day relief for pain, swelling, broken teeth or urgent dental concerns.</p>
-      <a class="ss-link" href="https://www.significantsmiles.com.au/emergency-dental-service/" target="_blank" rel="noopener">Visit Emergency Dentistry →</a>
-    </div>
-  </section>
-
-  <!-- MAP + HOURS -->
-  <section class="ss-grid ss-grid-2" style="margin-top:16px">
-    <div class="ss-card">
-      <h2>Find Us</h2>
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7079.928590553362!2d153.02152258075031!3d-27.470370915259856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915bca9db876a1%3A0xc8fbda71be82ae8!2sSignificant%20Smiles!5e0!3m2!1sen!2sus!4v1756359963741!5m2!1sen!2sus" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      <a class="ss-btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145" target="_blank" rel="noopener">Book Online</a>
-    </div>
-
-    <div class="ss-card">
-      <h2>Opening Hours</h2>
-      <div class="ss-kv ss-mono">
-        <div><span>Monday</span><span>8:00 am – 5:00 pm</span></div>
-        <div><span>Tuesday</span><span>8:00 am – 5:00 pm</span></div>
-        <div><span>Wednesday</span><span>8:00 am – 5:00 pm</span></div>
-        <div><span>Thursday</span><span>8:00 am – 5:00 pm</span></div>
-        <div><span>Friday</span><span>8:00 am – 1:00 pm</span></div>
-        <div><span>Saturday</span><span>Closed</span></div>
-        <div><span>Sunday</span><span>Closed</span></div>
+  <!-- HERO (band) -->
+  <div class="band">
+    <header class="wrap section hero">
+      <div>
+        <span class="tag">Brisbane CBD</span>
+        <h1 class="hero-title">Significant Smiles – Brisbane City Dental Clinic</h1>
+        <p class="hero-p">Modern care for <strong>General, Cosmetic &amp; Restorative Dentistry</strong>, Orthodontics, Emergency visits &amp; Dental Implants — minutes from Queen St Mall.</p>
       </div>
-      <a class="ss-btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145" target="_blank" rel="noopener">Book Online</a>
-    </div>
-  </section>
-  
-  <!-- MAP STACK SECTION -->
-<section class="ss-card" style="margin-top:16px">
-  <h2>Explore Our Map Stack</h2>
-  <p>See Significant Smiles across Brisbane CBD with our interactive Google Map Stack for easy navigation and trusted local visibility.</p>
-  <iframe 
-    src="https://www.google.com/maps/d/embed?mid=1kKtIx_4AanthD6wI7amjEnnctV2ajTY&ll=-27.470309089662493,153.02643117632414&z=21" 
-    width="100%" height="400" style="border:0;" loading="lazy">
-  </iframe>
-  <br><br>
-  <a class="ss-btn" href="https://www.google.com/maps/d/viewer?mid=1kKtIx_4AanthD6wI7amjEnnctV2ajTY&ll=-27.470309089662493%2C153.02643117632414&z=21" target="_blank" rel="noopener">View Full Map Stack</a>
-</section>
-
-  <!-- CITATIONS (new section) -->
-  <section class="ss-card" style="margin-top:16px">
-    <h2>We’re Listed &amp; Verified</h2>
-    <p>We’re listed on trusted healthcare and local directories—discover our verified profiles for reviews, availability, insurance details, and updates across Australia.</p>
-    <ul class="ss-list">
-      <li><a class="ss-link" href="https://significant-smiles.s3.ap-southeast-2.amazonaws.com/index.html" target="_blank" rel="noopener">AWS Cloud Profile</a></li>
-      <li><a class="ss-link" href="https://www.healthshare.com.au/practices/significant-smiles/40666-brisbane-city-4000/" target="_blank" rel="noopener">HealthShare</a></li>
-      <li><a class="ss-link" href="https://www.smile.com.au/dentist/brisbane/qld/significant-smiles/10853" target="_blank" rel="noopener">smile.com.au</a></li>
-      <li><a class="ss-link" href="https://www.hotdoc.com.au/medical-centres/brisbane-city-QLD-4000/significant-smiles1/doctors" target="_blank" rel="noopener">HotDoc</a></li>
-      <li><a class="ss-link" href="https://healthengine.com.au/dentist/qld/brisbane-city/significant-smiles/s91547" target="_blank" rel="noopener">HealthEngine</a></li>
-      <li><a class="ss-link" href="https://brisbaneapp.com.au/places/13850" target="_blank" rel="noopener">Brisbane App</a></li>
-      <li><a class="ss-link" href="https://chinchilla-round-zf4p.squarespace.com/" target="_blank" rel="noopener">Squarespace Listing</a></li>
-      <li><a class="ss-link" href="https://brisbanesmallbusiness.com.au/australia/brisbane-city/doctors-health-and-wellbeing/significant-smiles" target="_blank" rel="noopener">Brisbane Small Business</a></li>
-      <li><a class="ss-link" href="https://smilesearch.com.au/clinics/significant-smiles/gallery" target="_blank" rel="noopener">SmileSearch</a></li>
-    </ul>
-  </section>
-
-  <!-- INTERLINKING -->
-  <section class="ss-card" style="margin-top:16px">
-    <h2>Helpful Links</h2>
-    <ul class="ss-list">
-      <li><a class="ss-link" href="https://www.significantsmiles.com.au/" target="_blank" rel="noopener">Main Website</a></li>
-      <li><a class="ss-link" href="https://share.google/fvAJAp2Kyb4kl21Ca" target="_blank" rel="noopener">Latest Updates</a></li>
-      <li><a class="ss-link" href="https://www.significantsmiles.com.au/blog/" target="_blank" rel="noopener">Blog</a></li>
-      <li><a class="ss-link" href="https://www.significantsmiles.com.au/our-team/" target="_blank" rel="noopener">Meet Our Team</a></li>
-    </ul>
-    <a class="ss-btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145" target="_blank" rel="noopener">Book Online</a>
-  </section>
-
-  <!-- SOCIAL -->
-  <section class="ss-card" style="margin-top:16px">
-  <h2>Connect With Us</h2>
-  <div class="ss-social">
-    <!-- Google Business Profile -->
-    <a href="https://share.google/fvAJAp2Kyb4kl21Ca" target="_blank" rel="noopener" aria-label="Google Business Profile">
-      <!-- simple map pin icon -->
-      <svg class="ss-icon" viewBox="0 0 24 24" fill="currentColor" style="color:#34A853">
-        <path d="M12 2a7 7 0 0 0-7 7c0 4.97 7 13 7 13s7-8.03 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
-      </svg>
-    </a>
-
-    <!-- Facebook -->
-    <a href="https://www.facebook.com/SignificantSmiles" target="_blank" rel="noopener" aria-label="Facebook">
-      <svg class="ss-icon" viewBox="0 0 24 24" fill="currentColor" style="color:#1877F2">
-        <path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5.01 3.66 9.16 8.44 9.93v-7.02H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.87h2.74l-.44 2.91h-2.3V22c4.78-.77 8.44-4.92 8.44-9.93z"/>
-      </svg>
-    </a>
-
-    <!-- Instagram -->
-    <a href="https://www.instagram.com/significant_smiles/" target="_blank" rel="noopener" aria-label="Instagram">
-      <svg class="ss-icon" viewBox="0 0 24 24" fill="currentColor" style="color:#E4405F">
-        <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7zm5.75-.75a1.25 1.25 0 1 1 0 2.5 1.25 1.25 0 0 1 0-2.5z"/>
-      </svg>
-    </a>
+      <aside class="cta-card">
+        <p class="muted" style="margin-top:0">Suite 7, Level 1/167 Albert St • Brisbane City QLD 4000</p>
+        <p><strong>Call:</strong> <a href="tel:+61732210481">+61 7 3221 0481</a><br>
+           <strong>Email:</strong> <a href="mailto:reception@significantsmiles.com.au">reception@significantsmiles.com.au</a></p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145&utm_source=github&utm_medium=cloud&utm_campaign=local" target="_blank" rel="noopener">Book Online</a>
+          <a class="btn-ghost" href="#map">Find us</a>
+        </div>
+      </aside>
+    </header>
   </div>
-</section>
 
+  <main class="wrap">
 
-</div>
+    <!-- SERVICES (different structure) -->
+    <section class="section">
+      <h2 class="h2">Treatments We Offer</h2>
+      <div class="svc-strip">
+        <div class="card svc">
+          <h3>General Dentistry</h3>
+          <p>Check-ups, cleans, fillings &amp; gum care for all ages.</p>
+          <a class="btn-ghost" href="https://www.significantsmiles.com.au/general-dentist/" target="_blank" rel="noopener">General Dentistry →</a>
+        </div>
+        <div class="card svc">
+          <h3>Cosmetic Dentistry</h3>
+          <p>Whitening, veneers &amp; smile makeovers for confidence.</p>
+          <a class="btn-ghost" href="https://www.significantsmiles.com.au/cosmetic-dentistry/" target="_blank" rel="noopener">Cosmetic Options →</a>
+        </div>
+        <div class="card svc">
+          <h3>Restorative Dentistry</h3>
+          <p>Implants, crowns &amp; natural-looking restorations.</p>
+          <a class="btn-ghost" href="https://www.significantsmiles.com.au/restorative-dentistry/" target="_blank" rel="noopener">Restorative Care →</a>
+        </div>
+        <div class="card svc">
+          <h3>Orthodontics</h3>
+          <p>Clear aligners &amp; braces for a healthier bite.</p>
+          <a class="btn-ghost" href="https://www.significantsmiles.com.au/orthodontics/" target="_blank" rel="noopener">Orthodontics →</a>
+        </div>
+        <div class="card svc">
+          <h3>Emergency Dentistry</h3>
+          <p>Same-day care for pain, swelling or broken teeth.</p>
+          <a class="btn-ghost" href="https://www.significantsmiles.com.au/emergency-dental-service/" target="_blank" rel="noopener">Emergency Care →</a>
+        </div>
+      </div>
+    </section>
 
-<!-- JSON-LD LocalBusiness Schema -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Dentist",
-  "name": "Significant Smiles",
-  "url": "https://www.significantsmiles.com.au/",
-  "telephone": "+61-7-3221-0481",
-  "email": "reception@significantsmiles.com.au",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "Suite 7, Level 1/167 Albert St",
-    "addressLocality": "Brisbane City",
-    "addressRegion": "QLD",
-    "postalCode": "4000",
-    "addressCountry": "AU"
-  },
-  "openingHoursSpecification": [
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday"],"opens":"08:00","closes":"17:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Tuesday"],"opens":"08:00","closes":"17:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Wednesday"],"opens":"08:00","closes":"17:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Thursday"],"opens":"08:00","closes":"17:00"},
-    {"@type":"OpeningHoursSpecification","dayOfWeek":["Friday"],"opens":"08:00","closes":"13:00"}
-  ]
-}
-</script>
+    <!-- ABOUT (card-edge look) -->
+    <section class="section grid grid-2">
+      <div class="card card-edge">
+        <h2 class="h2">About &amp; Contact</h2>
+        <p><strong>Name:</strong> Significant Smiles</p>
+        <p><strong>Address:</strong> Suite 7, Level 1/167 Albert St, Brisbane City QLD 4000, Australia</p>
+        <p><strong>Phone:</strong> <a href="tel:+61732210481">+61 7 3221 0481</a> &nbsp;|&nbsp;
+           <strong>Email:</strong> <a href="mailto:reception@significantsmiles.com.au">reception@significantsmiles.com.au</a></p>
+        <p><strong>Website:</strong> <a href="https://www.significantsmiles.com.au/" target="_blank" rel="noopener">www.significantsmiles.com.au</a></p>
+        <a class="btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145&utm_source=github&utm_medium=cloud&utm_campaign=local" target="_blank" rel="noopener">Book Online</a>
+      </div>
+
+      <!-- Hours in timeline style -->
+      <div class="card">
+        <h2 class="h2">Opening Hours</h2>
+        <div class="timeline">
+          <div class="t-row"><span>Monday</span><span>8:00 am – 5:00 pm</span></div>
+          <div class="t-row"><span>Tuesday</span><span>8:00 am – 5:00 pm</span></div>
+          <div class="t-row"><span>Wednesday</span><span>8:00 am – 5:00 pm</span></div>
+          <div class="t-row"><span>Thursday</span><span>8:00 am – 5:00 pm</span></div>
+          <div class="t-row"><span>Friday</span><span>8:00 am – 1:00 pm</span></div>
+          <div class="t-row"><span>Saturday</span><span>Closed</span></div>
+          <div class="t-row"><span>Sunday</span><span>Closed</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAP + STACK (reversed order vs Netlify) -->
+    <section class="section grid grid-2" id="map">
+      <div class="card">
+        <h2 class="h2">Interactive Map Stack</h2>
+        <p class="muted">Explore our presence across Brisbane CBD and nearby spots.</p>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1kKtIx_4AanthD6wI7amjEnnctV2ajTY&ll=-27.470309089662493,153.02643117632414&z=21" height="420" loading="lazy"></iframe>
+        <p><a class="btn-ghost" href="https://www.google.com/maps/d/viewer?mid=1kKtIx_4AanthD6wI7amjEnnctV2ajTY&ll=-27.470309089662493%2C153.02643117632414&z=21" target="_blank" rel="noopener">Open full map</a></p>
+      </div>
+      <div class="card">
+        <h2 class="h2">Find Us</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7079.928590553362!2d153.02152258075031!3d-27.470370915259856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b915bca9db876a1%3A0xc8fbda71be82ae8!2sSignificant%20Smiles!5e0!3m2!1sen!2sus!4v1756359963741!5m2!1sen!2sus" height="420" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <a class="btn" href="https://www.centaurportal.com/d4w/org-3634/search?practiceID=4145&utm_source=github&utm_medium=cloud&utm_campaign=local" target="_blank" rel="noopener">Book Online</a>
+      </div>
+    </section>
+
+    <!-- Nearby areas (unique section for GitHub) -->
+    <section class="section">
+      <div class="card">
+        <h2 class="h2">Serving Nearby Areas</h2>
+        <p class="muted">Brisbane City, Spring Hill, Fortitude Valley, South Brisbane, Kangaroo Point, New Farm.</p>
+      </div>
+    </section>
+
+    <!-- Citations -->
+    <section class="section grid grid-2">
+      <div class="card">
+        <h2 class="h2">We’re Listed &amp; Verified</h2>
+        <ul class="lead-list">
+          <li><a href="https://significant-smiles.s3.ap-southeast-2.amazonaws.com/index.html" target="_blank" rel="noopener">AWS Cloud Profile</a></li>
+          <li><a href="https://www.healthshare.com.au/practices/significant-smiles/40666-brisbane-city-4000/" target="_blank" rel="noopener">HealthShare</a></li>
+          <li><a href="https://www.hotdoc.com.au/medical-centres/brisbane-city-QLD-4000/significant-smiles1/doctors" target="_blank" rel="noopener">HotDoc</a></li>
+          <li><a href="https://healthengine.com.au/dentist/qld/brisbane-city/significant-smiles/s91547" target="_blank" rel="noopener">HealthEngine</a></li>
+          <li><a href="https://smilesearch.com.au/clinics/significant-smiles/gallery" target="_blank" rel="noopener">SmileSearch</a></li>
+        </ul>
+      </div>
+
+      <!-- Social -->
+      <div class="card">
+        <h2 class="h2">Connect With Us</h2>
+        <div class="social">
+          <a href="https://share.google/fvAJAp2Kyb4kl21Ca" target="_blank" rel="noopener" aria-label="Google Business Profile">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" style="color:#34A853"><path d="M12 2a7 7 0 0 0-7 7c0 4.97 7 13 7 13s7-8.03 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/SignificantSmiles" target="_blank" rel="noopener" aria-label="Facebook">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" style="color:#1877F2"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5.01 3.66 9.16 8.44 9.93v-7.02H7.9v-2.91h2.54V9.41c0-2.5 1.49-3.89 3.77-3.89 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.87h2.74l-.44 2.91h-2.3V22c4.78-.77 8.44-4.92 8.44-9.93z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/significant_smiles/" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg class="ico" viewBox="0 0 24 24" fill="currentColor" style="color:#E4405F"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 3.5a5.5 5.5 0 1 1 0 11 5.5 5.5 0 0 1 0-11z"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- JSON-LD (keep NAP consistent) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Dentist",
+    "name":"Significant Smiles",
+    "url":"https://www.significantsmiles.com.au/",
+    "telephone":"+61-7-3221-0481",
+    "email":"reception@significantsmiles.com.au",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Suite 7, Level 1/167 Albert St",
+      "addressLocality":"Brisbane City",
+      "addressRegion":"QLD",
+      "postalCode":"4000",
+      "addressCountry":"AU"
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Monday","opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Tuesday","opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Wednesday","opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Thursday","opens":"08:00","closes":"17:00"},
+      {"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"08:00","closes":"13:00"}
+    ]
+  }
+  </script>
+</body>
+</html>
